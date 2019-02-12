@@ -21,14 +21,18 @@ period = np.arange(0,2*np.pi,0.01)
 
 # Sine Graph and Cosine Graph
 sine = np.sin(period )
-cosine = np.cos(period )                              
+cosine = np.cos(period )     
+tan = np.tan(period)
 
 
 # Plotting both the graphs
-plt.plot(period , sine , period , cosine)             
+plt.plot(period , sine , period , cosine,period,tan)     
+
+####defining the x and y axis
+plt.axis([0, 2*np.pi, -1, 1])
 
 # Creating Legends
-plt.subplot().legend(['Sine','Cosine'])               #
+plt.subplot().legend(['Sine','Cosine','tan'])               #
 
 # Creating X and Y axes
 plt.subplot().axhline(y=0, color='k')
